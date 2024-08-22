@@ -1,18 +1,27 @@
+
 import javax.swing.JFrame;
 
 public class Main {
+    public static void main(String[] args) {
+        //window dimensions
+        int width = 360;
+        int height = 640;
 
-public static void main(String[] args) {
+        //Create a JFrame
+        JFrame window = new JFrame("Happy");
 
-      JFrame window = new JFrame();
-      window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-      window.setResizable(true);
-      window.setTitle("Game one");
-      GamePanel gamePanel = new GamePanel();
-      window.add(gamePanel);
-      window.pack();
-      window.setLocationRelativeTo(null);
-      window.setVisible(true);
+        //set window size and location
+        window.setSize(width, height);
+        window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        window.setLocationRelativeTo(null);
 
-}
+        FlappyPanel panel = new FlappyPanel();
+        window.add(panel);
+        window.pack();
+        //show the window
+        window.setVisible(true);
+
+
+    }
+    
 }
